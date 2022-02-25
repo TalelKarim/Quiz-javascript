@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+      <h1>Quiz de niveau</h1>
+       
+      <form method="post" action="traitement.php">
+        <p>
+            <div class="question"> Quelle proprèté CSS permet d'effacer les puces d'une liste à puces ?</div>   <br />
+            <div class="first-ques">
+                <input id="true-one" type="checkbox" value="list-style-type : none" /> <label>list-style-type : none</label><br />
+                <input type="checkbox" value=".." /> <label> display : no-ul</label><br />
+                <input type="checkbox" value=".." /> <label >ul-list: none</label><br />
+                <input type="checkbox" value=".."/> <label >nav: no-list-type</label>
+            </div>
+           
+        </p>
+     </form>
+      
+     <hr />
+
+     <form method="post" action="traitement.php">
+        <p>
+             <div class="question"> Par défaut, il est impossible de donner des dimensions à l'une de ces balises. Laquelle ?</div> <br />
+             <div class="second-ques">
+                <input id="true-two" type="checkbox" value="<a>" /> <label> &lta&gt</label><br />
+                    <input type="checkbox" value=".." /> <label> &ltdiv&gt</label><br />
+                    <input type="checkbox"  value=".."/> <label >&ltp&gt</label><br />
+                    <input type="checkbox" value=".."/> <label >&lth6&gt</label>
+             </div>
+          
+        </p>
+     </form>
+
+     <hr />
+ 
+
+     <form method="post" action="traitement.php">
+        <p>
+            <div class="question"> Quelle propriété CSS permet de modifier la marge intérieure droite d'un élément ?</div> <br />
+            <div class="third-ques">
+                <input type="checkbox" value=".."  /> <label>margin-left</label><br />
+                <input type="checkbox" value=".."/> <label> margin-right</label><br />
+                <input id="true-three" type="checkbox" value="padding-right" /> <label >padding-right</label><br />
+                <input type="checkbox" value=".."/> <label >padding-bottom</label>
+            </div> 
+        </p>
+     </form>
+
+     <hr />
+
+     <form method="post" action="traitement.php">
+        <p>
+           <div class="question">Quelle valeur de la propriété CSS  overflow masque le texte qui dépasse d'un bloc sans ajouter de barres de défilement ?</div> <br />
+           <div class="fourth-ques">
+            <input type="checkbox"  value=".."/> <label>visible</label><br />
+            <input id="true-four" type="checkbox" value="hidden" /> <label> hidden</label><br />
+            <input type="checkbox" value=".."  /> <label >auto</label><br />
+            <input type="checkbox" value=".."/> <label >scroll</label>
+           </div>
+        </p>
+     </form>
+
+     <hr />
+
+     <form method="post" action="traitement.php">
+        <p>
+            <div class="question">Un élément qui possède une min-width de 200px et une width de 50% pourra avoir une taille...</div> <br />
+            <div class="fifth-ques">
+            <input  id="true-five" type="checkbox" value = 'de 200px à l infini ' /> <label>De 200px à l'infini</label><br />
+            <input type="checkbox" value=".."/> <label> De 100px à 200px </label><br />
+            <input type="checkbox"  value=".."/> <label >De 0px à 200px </label><br />
+            <input type="checkbox" value=".."/> <label >De 200px à 400px</label>
+            </div>
+            
+        </p>
+     </form>
+
+     <hr />
+     <div class="bouton">
+        <button>Validate</button>
+     </div>
+    
+    <div class="resultatFinal">
+
+        <p class="score"></p>
+
+        <p class="rating">
+           <i class="fas fa-star"></i>
+           <i class="fas fa-star"></i>
+           <i class="fas fa-star"></i>
+           <i class="fas fa-star"></i>
+           <i class="fas fa-star"></i>
+       </p>
+   
+    </div>
+   
+
+    </div>
+</body>
+</html>
