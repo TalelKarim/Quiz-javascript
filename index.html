@@ -13,7 +13,7 @@
     <div class="content">
       <h1>Quiz de niveau</h1>
        
-      <form method="post" action="traitement.php">
+      <form  method="post" action="traitement.php">
         <p>
             <div class="question"> Quelle proprèté CSS permet d'effacer les puces d'une liste à puces ?</div>   <br />
             <div class="first-ques">
@@ -58,7 +58,7 @@
 
      <hr />
 
-     <form method="post" action="traitement.php">
+     <form  method="post" action="traitement.php">
         <p>
            <div class="question">Quelle valeur de la propriété CSS  overflow masque le texte qui dépasse d'un bloc sans ajouter de barres de défilement ?</div> <br />
            <div class="fourth-ques">
@@ -71,8 +71,8 @@
      </form>
 
      <hr />
-
-     <form method="post" action="traitement.php">
+    
+     <form  method="post" action="traitement.php">
         <p>
             <div class="question">Un élément qui possède une min-width de 200px et une width de 50% pourra avoir une taille...</div> <br />
             <div class="fifth-ques">
@@ -86,12 +86,87 @@
      </form>
 
      <hr />
+
+     <form  method="post" action="traitement.php">
+        <p>
+            <div class="question">Peut-on insérer une balise  &ltheader&gt à l'intérieur d'une balise  &ltsection&gt ?
+            </div> <br />
+            <div class="sixth-ques">
+            <input  type="checkbox" value = 'de 200px à l infini ' /> <label>Oui, c'est autorisé mais ça n'a aucun sens</label><br />
+            <input  id="true-six" type="checkbox" value=".."/> <label> Oui, c'est autorisé et ça peut avoir du sens </label><br />
+            <input type="checkbox"  value=".."/> <label >Non, c'est interdit (et stupide !) </label><br />
+            </div>
+            
+        </p>
+        </form>
+
+     <hr />
+        <form method="post" action="traitement.php">
+            <p>
+                <div class="question">Vrai ou faux ? L'utilisation de la balise &lttbody&gt est obligatoire dans un tableau en HTML5.</div> <br />
+                <div class="seventh-ques">
+                <input   type="checkbox" value = 'de 200px à l infini ' /> <label>Vrai</label><br />
+                <input  id="true-seven" type="checkbox" value=".."/> <label> Faux </label><br />
+                </div>
+                
+            </p>
+            </form>
+
+     <hr />        
+
+            <form method="post" action="traitement.php">
+                <p>
+                    <div class="question">Quelle est la méthode d'envoi de formulaire la plus recommandée qui permet d'envoyer le plus de données ?  </div> <br />
+                    <div class="eith-ques">
+                    <input  type="checkbox"  /> <label>Get</label><br />
+                    <input type="checkbox" value=".."/> <label> action </label><br />
+                    <input  id="true-eight" type="checkbox"  value=".."/> <label >Post </label><br />
+                    <input type="checkbox" value=".."/> <label >submit</label>
+                    </div>
+                    
+                </p>
+                </form>
+             <hr />
+
+         
+             <form  method="post" action="traitement.php">
+                <p>
+                    <div class="question">Comment fait-on pour créer deux groupes de boutons radio distincts, les deux groupes ne devant permettre la sélection que d'une seule valeur ?</div> <br />
+                    <div class="ninth-ques">
+                    <input  type="checkbox"  /> <label>Il n'y a rien à faire de particulier, c'est automatique</label><br />
+                    <input type="checkbox" value=".."/> <label>En les plaçant côte à côte dans le code source </label><br />
+                    <input type="checkbox"  value=".."/> <label >En les plaçant à l'intérieur d'un même &ltfieldset&gt </label><br />
+                    <input  id="true-nine"  type="checkbox" value=".."/> <label >En donnant le même nom 'name' aux boutons de chaque groupe</label> <br />
+                    <input type="checkbox" value=".."/> <label >En donnant le même 'id' aux boutons de chaque groupe </label> <br />
+
+                    </div>
+                    
+                </p>
+                </form>
+
+             <hr />
+             
+             
+             <form method="post" action="traitement.php">
+                <p>
+                    <div class="question">Pourquoi est-il recommandé de proposer plusieurs formats de fichier vidéo au sein d'une balise <span>&ltvideo&gt</span> ?</div> <br />
+                    <div class="tenth-ques">
+                    <input   type="checkbox"  /> <label>Cela permet de charger plus rapidement la vidéo </label><br />
+                    <input type="checkbox" value=".."/> <label> Cela permet de gérer les navigateurs qui ne connaissent pas la balise &ltvideo&gt</label><br />
+                    <input id="true-ten" type="checkbox"  value=".."/> <label >Cela permet au navigateur de sélectionner un format vidéo qu'il reconnaît </label><br />
+                    <input type="checkbox" value=".."/> <label >Cela permet de gérer les navigateurs qui ne reconnaissent pas JavaScript </label>
+                    </div>
+                    
+                </p>
+                </form>
+
+               
      <div class="bouton">
         <button>Validate</button>
      </div>
     
     <div class="resultatFinal">
-
+        <p class="remplirTous"></p>
         <p class="score"></p>
 
         <p class="rating">
