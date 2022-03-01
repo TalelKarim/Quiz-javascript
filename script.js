@@ -25,8 +25,9 @@ const tenthQues = document.querySelectorAll('.tenth-ques > input');
 
 const Questions = [premiereQues, secondQues, thirdQues, fourthQues, fifthQues,sixthQues,seventhQues,eithQues,ninthQues,tenthQues];
 
+const outputFinal = document.querySelector('.resultatFinal'); 
 const contenu = document.querySelector(".content");
-const fillAll = document.querySelector(".remplirTous")
+const fillAll = document.querySelector(".remplirTous");
 var checkedAnswers = 0;
 var score = 0;
 var rank = 0;
@@ -41,7 +42,7 @@ var rank = 0;
             for(let j=0; j<Questions[i].length; j++){
                 
                 Questions[i][j].addEventListener('change',function(){
-                    checkedAnswers ++; 
+                     (Questions[i][j].checked)?  checkedAnswers ++ : checkedAnswers--; 
                 })
             }
         }  
@@ -113,8 +114,17 @@ for (let i=0; i<Questions.length ; i++){
       
      
      
+function saisirTous(){
+    fillAll.textContent = "Veuillez remplir tous les champs ! ";
+} 
   
+function hide(){
+    fillAll.style.display = "none";
+ }
 
+ function hideScore(){
+       outputFinal.style.display ="none"
+ }
 
 // calcul du score 
   
@@ -134,12 +144,11 @@ for (let i=0; i<Questions.length ; i++){
     let trueTen = document.querySelector('#true-ten').checked;
     
     let trueAnswers = [trueOne, trueTwo, trueThree, trueFour, trueFive, trueSix, trueSeven, trueEight, trueEight, trueNine, trueTen];
+    
+   
+    
 
-
-    if (checkedAnswers < 10) {
-        fillAll.textContent = "Veuillez Remplir Tous les Champs ! "
-     }
-
+  
     for(let i=0; i < trueAnswers.length ; i++){
         if(trueAnswers[i]){
             score += 10;
@@ -176,18 +185,37 @@ for (let i=0; i<Questions.length ; i++){
         score = 0;
         fillAll.style.display = "none";
         Rating.style.display = "block";
-    for (let i=0 ; i< Math.floor(rank); i++){
-       Rating.children[i].style.color = '#FFD700';
-    } 
     
+        for (let i=0 ; i< Math.floor(rank); i++){
+        Rating.children[i].style.color = '#FFD700';
+    } 
     }
     
     
  }
 
-// Affichage du rang en étoiles 
+
+ // verifier que l'utilisateur a saisi tous les réponses 
+ function verifyAllAnswered(){
+    
+        saisirTous();
+        setTimeout(hide, 2000);
+        fillAll.style.display ="block";
+
+ }
+
+// Output final 
 
 
 
-bouton.addEventListener('click',Score);
+if (checkedAnswers < 10){
+    hideScore();
+    bouton.addEventListener('click', verifyAllAnswered);
+}
+
+
+    bouton.addEventListener('click', function(){
+        Score();
+        outputFinal.style.display = "flex";
+    });
 

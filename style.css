@@ -109,4 +109,5 @@ form{
     color: gray;
     opacity: 1;
     font-size: 1em;
+    transition: 1.5s ease;
 }
