@@ -217,5 +217,6 @@ if (checkedAnswers < 10){
     bouton.addEventListener('click', function(){
         Score();
         outputFinal.style.display = "flex";
+        setTimeout(hideScore,3000);
     });
 
